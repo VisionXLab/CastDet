@@ -6,6 +6,8 @@
 ## ✨ Latest Updates
 
 
+📆 [**2025-06-05**] : The code for **Oriented GLIP**, **Oriented GroundingDINO**, and **Oriented ViLD** are now available!
+
 📆 [**2025-02-08**] : The code for **Oriented CastDet** is now available! 🎉 CastDet now supports Open-vocabulary Oriented Aerial Object Detection. Stay tuned—**Oriented GLIP**, **Oriented GroundingDINO**, and **Oriented ViLD** are coming soon! 🚀
 
 📆 [**2024-11-04**] : Our paper ["Exploiting Unlabeled Data with Multiple Expert Teachers for Open Vocabulary Aerial Object Detection and Its Orientation Adaptation"](https://arxiv.org/abs/2411.02057) is available open on arxiv!

@@ -22,13 +22,12 @@ cp work_dirs/$exp2/nwpu45_unlabeled_with_gdino_pseudos_swin-t_adamw_top1.json da
 
 # Step3: self-training
 exp3="grounding_dino_swin-t_visdrone_base-set_adamw_nwpu45"
-exp3_="grounding_dino_swin-t_visdrone_base-set_adamw_nwpu45_"
 CUDA_VISIBLE_DEVICES=$DEVICES_ID python tools/train.py \
     projects/GroundingDINO/configs/$exp3.py \
-    --work-dir work_dirs/$exp3_
+    --work-dir work_dirs/$exp3
 
 # Step4: test
 CUDA_VISIBLE_DEVICES=$DEVICES_ID python tools/test.py \
     projects/GroundingDINO/configs/$exp3.py \
-    work_dirs/$exp3_/iter_10000.pth \
-    --work-dir work_dirs/$exp3_/dior_test
+    work_dirs/$exp3/iter_10000.pth \
+    --work-dir work_dirs/$exp3/dior_test

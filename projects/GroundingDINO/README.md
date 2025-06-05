@@ -3,12 +3,6 @@
 > - [An Open and Comprehensive Pipeline for Unified Object Grounding and Detection](https://arxiv.org/abs/2401.02361)
 > - [Grounding DINO: Marrying DINO with Grounded Pre-Training for Open-Set Object Detection](https://arxiv.org/abs/2303.05499)
 
-## Quick Start:
-
-```shell
-bash projects/GroundingDINO/run.sh
-```
-
 
 ## Dataset Preparation
 
@@ -29,6 +23,13 @@ python projects/GroundingDINO/tools/prepare_ovdg_dataset.py \
     --data_dir data/NWPU-RESISC45/NWPU-RESISC45 \
     --save_path data/NWPU-RESISC45/annotations/nwpu45_unlabeled_2.json
 ```
+
+## Quick Start:
+
+```shell
+bash projects/GroundingDINO/run.sh
+```
+
 
 ## Training
 
@@ -63,13 +64,12 @@ cp work_dirs/$exp2/snwpu45_unlabeled_with_gdino_pseudos_swin-t_adamw_top1.json d
 ```
 
 - **[Optional]** Step3: post-training
-s
+
 ```shell
 exp3="grounding_dino_swin-t_visdrone_base-set_adamw_nwpu45"
-exp3_="grounding_dino_swin-t_visdrone_base-set_adamw_nwpu45_"
 python tools/train.py \
     projects/GroundingDINO/configs/$exp3.py \
-    --work-dir work_dirs/$exp3_
+    --work-dir work_dirs/$exp3
 ```
 
 ## Evaluation
@@ -77,8 +77,8 @@ python tools/train.py \
 ```shell
 python tools/test.py \
     projects/GroundingDINO/configs/$exp3.py \
-    work_dirs/$exp3_/iter_10000.pth \
-    --work-dir work_dirs/$exp3_/dior_test
+    work_dirs/$exp3/iter_10000.pth \
+    --work-dir work_dirs/$exp3/dior_test
 ```
 
 ## Acknowledgement

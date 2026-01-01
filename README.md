@@ -1,10 +1,11 @@
-# [ECCV 2024] Toward Open Vocabulary Aerial Object Detection with CLIP-Activated Student-Teacher Learning
+# [ECCV 2024 / IJCV 2026] Toward Open Vocabulary Aerial Object Detection with CLIP-Activated Student-Teacher Learning
 
 
 > **Note**: This branch is for oriented open-vocabulary aerial object detection. **Please switch to another branch for horizontal detection.**
 
 ## ✨ Latest Updates
 
+📆 [**2026-01-01**] : The journal version is accepted by IJCV! 🎉
 
 📆 [**2025-06-05**] : The code for **Oriented GLIP**, **Oriented GroundingDINO**, and **Oriented ViLD** are now available!
 
